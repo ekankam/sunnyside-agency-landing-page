@@ -1,0 +1,65 @@
+@use '../abstracts/variables' as *;
+
+.brand {
+    &__contents {
+        width: 50%;
+        padding: 0 5rem;
+
+        .title {
+            font-family: $font-header;
+            font-size: 4rem;
+            color: $nu-very-dark-desaturated-blue;
+            font-weight: 900;
+        }
+
+        .description {
+            margin: 3rem 0;
+            line-height: 1.5;
+            width: 50ch;
+        }
+
+        .link {
+            position: relative;
+            display: inline-block;
+            padding: 0rem 0.5rem;
+            color: $nu-very-dark-desaturated-blue;
+            font-family: $font-header;
+            font-size: 1.7rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            transition: all 300ms ease-in-out;
+
+            &:hover {
+                &::after {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    bottom: 0.12rem;
+                    width: 100%;
+                    height: 0.8rem;
+                    background-color: $pr-yellow;
+                    border-radius: 1rem;
+                    z-index: -1;
+                }
+            }
+        }
+        .pink {
+            &:hover {
+                &::after {
+                    background-color: $pr-soft-red;
+                }
+            }
+        }
+    }
+
+    &__image-box {
+        width: 50%;
+        position: relative;
+
+        img {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+    }
+}

@@ -1,0 +1,38 @@
+@use '../abstracts/variables' as *;
+
+.footer {
+    background-color: #73c4b3fd;
+    padding: 7rem 0;
+
+    &__logo {
+        margin-bottom: 1.5rem;
+    }
+
+    ul {
+        margin-bottom: 5rem;
+
+        .nav-link {
+            color: $pr-dark-desaturated-cyan;
+            transition: color 200ms ease-in-out;
+
+            &:hover {
+                color: $nu-white;
+            }
+        }
+    }
+
+    &__socials {
+        .icon {
+            transition: color 200ms ease-in-out;
+            &:not(last-child) {
+                margin-right: 1.5rem;
+            }
+
+            &:hover {
+                svg path {
+                    fill: $nu-white;
+                }
+            }
+        }
+    }
+}

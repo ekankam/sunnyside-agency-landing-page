@@ -1,0 +1,45 @@
+@use '../abstracts/variables' as *;
+
+.services {
+    overflow-x: hidden;
+    &__graphics,
+    &__photography {
+        width: 50%;
+        position: relative;
+
+        .imge-box {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        .contents {
+            position: absolute;
+            left: 50%;
+            bottom: 10rem;
+            transform: translateX(-50%);
+            text-align: center;
+            line-height: 1.5;
+
+            .title {
+                font-family: $font-header;
+                font-size: 3rem;
+                color: $nu-very-dark-desaturated-blue;
+                font-weight: 900;
+                margin-bottom: 3rem;
+            }
+
+            .green {
+                color: $pr-dark-desaturated-cyan;
+            }
+
+            .blue {
+                color: $pr-dark-blue;
+            }
+
+            .description {
+                width: 40ch;
+            }
+        }
+    }
+}

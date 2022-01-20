@@ -14,7 +14,11 @@ html {
 body {
   font-family: "Barlow", sans-serif;
   font-size: 1.8rem;
-  line-height: 1.5;
+  line-height: 1.3;
+}
+
+p {
+  color: #818498;
 }
 
 ul {
@@ -128,6 +132,172 @@ button {
   .header__banner-content .down-arrow {
     top: 8.8rem;
   }
+}
+
+.brand__contents {
+  width: 50%;
+  padding: 0 5rem;
+}
+.brand__contents .title {
+  font-family: "Fraunces", serif;
+  font-size: 4rem;
+  color: #23303e;
+  font-weight: 900;
+}
+.brand__contents .description {
+  margin: 3rem 0;
+  line-height: 1.5;
+  width: 50ch;
+}
+.brand__contents .link {
+  position: relative;
+  display: inline-block;
+  padding: 0rem 0.5rem;
+  color: #23303e;
+  font-family: "Fraunces", serif;
+  font-size: 1.7rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  transition: all 300ms ease-in-out;
+}
+.brand__contents .link:hover::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0.12rem;
+  width: 100%;
+  height: 0.8rem;
+  background-color: #fad400;
+  border-radius: 1rem;
+  z-index: -1;
+}
+.brand__contents .pink:hover::after {
+  background-color: #fe7867;
+}
+.brand__image-box {
+  width: 50%;
+  position: relative;
+}
+.brand__image-box img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.services {
+  overflow-x: hidden;
+}
+.services__graphics, .services__photography {
+  width: 50%;
+  position: relative;
+}
+.services__graphics .imge-box, .services__photography .imge-box {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.services__graphics .contents, .services__photography .contents {
+  position: absolute;
+  left: 50%;
+  bottom: 10rem;
+  transform: translateX(-50%);
+  text-align: center;
+  line-height: 1.5;
+}
+.services__graphics .contents .title, .services__photography .contents .title {
+  font-family: "Fraunces", serif;
+  font-size: 3rem;
+  color: #23303e;
+  font-weight: 900;
+  margin-bottom: 3rem;
+}
+.services__graphics .contents .green, .services__photography .contents .green {
+  color: #25564b;
+}
+.services__graphics .contents .blue, .services__photography .contents .blue {
+  color: #19536b;
+}
+.services__graphics .contents .description, .services__photography .contents .description {
+  width: 40ch;
+}
+
+.testimonials {
+  padding: 15rem 10rem;
+}
+.testimonials__header {
+  font-family: "Fraunces", serif;
+  color: #a7abae;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 10rem;
+  letter-spacing: 2px;
+}
+.testimonials__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 2rem;
+}
+.testimonials__container .client-testimonial .image-box {
+  position: relative;
+  width: 8rem;
+  height: 8rem;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.testimonials__container .client-testimonial .image-box img {
+  width: 100%;
+  display: block;
+}
+.testimonials__container .client-testimonial .description {
+  margin: 4rem 0;
+  text-align: center;
+  line-height: 1.6;
+}
+.testimonials__container .client-testimonial .client-name {
+  font-family: "Fraunces", serif;
+}
+.testimonials__container .client-testimonial .job {
+  margin-top: 1rem;
+  color: #a7abae;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.gallery__photo {
+  position: relative;
+}
+.gallery__photo img {
+  width: 100%;
+  display: block;
+}
+
+.footer {
+  background-color: #73c4b3fd;
+  padding: 7rem 0;
+}
+.footer__logo {
+  margin-bottom: 1.5rem;
+}
+.footer ul {
+  margin-bottom: 5rem;
+}
+.footer ul .nav-link {
+  color: #25564b;
+  transition: color 200ms ease-in-out;
+}
+.footer ul .nav-link:hover {
+  color: white;
+}
+.footer__socials .icon {
+  transition: color 200ms ease-in-out;
+}
+.footer__socials .icon:not(last-child) {
+  margin-right: 1.5rem;
+}
+.footer__socials .icon:hover svg path {
+  fill: white;
 }
 
 /*# sourceMappingURL=main.css.map */

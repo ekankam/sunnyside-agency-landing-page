@@ -1,0 +1,50 @@
+@use '../abstracts/variables' as *;
+
+.testimonials {
+    padding: 15rem 10rem;
+
+    &__header {
+        font-family: $font-header;
+        color: $nu-grayish-blue;
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 10rem;
+        letter-spacing: 2px;
+    }
+
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 2rem;
+
+        .client-testimonial {
+            .image-box {
+                position: relative;
+                width: 8rem;
+                height: 8rem;
+                overflow: hidden;
+                border-radius: 50%;
+
+                img {
+                    width: 100%;
+                    display: block;
+                }
+            }
+
+            .description {
+                margin: 4rem 0;
+                text-align: center;
+                line-height: 1.6;
+            }
+
+            .client-name {
+                font-family: $font-header;
+            }
+
+            .job {
+                margin-top: 1rem;
+                color: $nu-grayish-blue;
+            }
+        }
+    }
+}
