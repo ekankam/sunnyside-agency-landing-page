@@ -1,27 +1,27 @@
 {
-  "name": "sunnyside-agency-landing-page",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "dev": "parcel src/index.html",
-    "build": "parcel build src/index.html"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ekankam/sunnyside-agency-landing-page.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ekankam/sunnyside-agency-landing-page/issues"
-  },
-  "homepage": "https://github.com/ekankam/sunnyside-agency-landing-page#readme",
-  "dependencies": {
-    "parcel-bundler": "^1.12.5"
-  },
-  "devDependencies": {
-    "sass": "^1.49.0"
-  }
+    "name": "sunnyside-agency-landing-page",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "dev": "parcel src/index.html",
+        "build": "parcel build src/index.html"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ekankam/sunnyside-agency-landing-page.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/ekankam/sunnyside-agency-landing-page/issues"
+    },
+    "homepage": "https://github.com/ekankam/sunnyside-agency-landing-page#readme",
+    "dependencies": {
+        "parcel-bundler": "^1.12.5"
+    },
+    "devDependencies": {
+        "sass": "^1.49.0"
+    }
 }

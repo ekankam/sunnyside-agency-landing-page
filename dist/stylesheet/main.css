@@ -1,0 +1,133 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100vh;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Barlow", sans-serif;
+  font-size: 1.8rem;
+  line-height: 1.5;
+}
+
+ul {
+  list-style: none;
+}
+
+a:visited,
+a:link {
+  text-decoration: none;
+}
+
+button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.wrapper {
+  max-width: 1440px;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+}
+.flex-jc-center {
+  justify-content: center;
+}
+.flex-jc-between {
+  justify-content: space-between;
+}
+.flex-ai-center {
+  align-items: center;
+}
+.flex-gap {
+  gap: 2rem;
+}
+.flex-col {
+  flex-direction: column;
+}
+
+.header {
+  width: 100%;
+  height: 100vh;
+  background: url("/assets/images/desktop/image-header.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.header nav {
+  padding: 3rem 1.5rem;
+}
+@media screen and (max-width: 684px) {
+  .header nav .nav-item,
+.header nav .btn {
+    display: none;
+  }
+}
+.header nav .nav-link {
+  color: white;
+}
+.header nav .btn {
+  padding: 2rem 4rem;
+  font-weight: 600;
+  border-radius: 5rem;
+  background: white;
+  text-transform: uppercase;
+  transition: 200ms ease-in-out;
+}
+.header nav .btn:hover {
+  background: rgba(130, 213, 255, 0.815);
+  color: white;
+}
+.header nav .menu {
+  display: none;
+}
+@media screen and (max-width: 684px) {
+  .header nav .menu {
+    display: block;
+  }
+}
+.header__banner-content {
+  text-align: center;
+  margin-top: 1rem;
+  color: white;
+}
+@media screen and (min-width: 1285px) {
+  .header__banner-content {
+    position: relative;
+    top: 25%;
+  }
+}
+.header__banner-content .intro {
+  font-family: "Fraunces", serif;
+  font-size: 5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+@media screen and (min-width: 1285px) {
+  .header__banner-content .intro {
+    font-size: 7rem;
+  }
+}
+.header__banner-content .down-arrow {
+  height: 8rem;
+  position: relative;
+  top: 6rem;
+}
+@media screen and (min-width: 1285px) {
+  .header__banner-content .down-arrow {
+    top: 8.8rem;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,77 @@
+@use '../abstracts/variables' as *;
+
+.header {
+    width: 100%;
+    height: 100vh;
+    background: url('/assets/images/desktop/image-header.jpg');
+    background-position: center;
+    background-size: cover;
+
+    nav {
+        padding: 3rem 1.5rem;
+
+        .nav-item,
+        .btn {
+            @media screen and (max-width: 684px) {
+                display: none;
+            }
+        }
+
+        .nav-link {
+            color: $nu-white;
+        }
+
+        .btn {
+            padding: 2rem 4rem;
+            font-weight: 600;
+            border-radius: 5rem;
+            background: $nu-white;
+            text-transform: uppercase;
+            transition: 200ms ease-in-out;
+
+            &:hover {
+                background: rgba(130, 213, 255, 0.815);
+                color: $nu-white;
+            }
+        }
+
+        .menu {
+            display: none;
+
+            @media screen and (max-width: 684px) {
+                display: block;
+            }
+        }
+    }
+
+    &__banner-content {
+        text-align: center;
+        margin-top: 1rem;
+        color: $nu-white;
+
+        @media screen and (min-width: 1285px) {
+            position: relative;
+            top: 25%;
+        }
+
+        .intro {
+            font-family: $font-header;
+            font-size: 5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+
+            @media screen and (min-width: 1285px) {
+                font-size: 7rem;
+            }
+        }
+        .down-arrow {
+            height: 8rem;
+            position: relative;
+            top: 6rem;
+
+            @media screen and (min-width: 1285px) {
+                top: 8.8rem;
+            }
+        }
+    }
+}
