@@ -1,44 +1,62 @@
 @use '../abstracts/variables' as *;
 
 .services {
-    overflow-x: hidden;
-    &__graphics,
-    &__photography {
-        width: 50%;
-        position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 550px;
 
-        .imge-box {
-            width: 100%;
-            height: 100%;
-            display: block;
+    &__graphics {
+        background: url('/assets/images/desktop/image-graphic-design.jpg');
+        background-position: center;
+        background-size: cover;
+        position: relative;
+    }
+    &__photography {
+        background: url('/assets/images/desktop/image-photography.jpg');
+        background-position: center;
+        background-size: cover;
+        position: relative;
+    }
+
+    &__contents {
+        position: absolute;
+
+        left: 50%;
+        bottom: 7rem;
+        transform: translateX(-50%);
+        text-align: center;
+        line-height: 1.5;
+
+        .title {
+            font-family: $font-header;
+            font-size: 3rem;
+            color: $nu-very-dark-desaturated-blue;
+            font-weight: 900;
+            margin-bottom: 3rem;
         }
 
-        .contents {
-            position: absolute;
-            left: 50%;
-            bottom: 10rem;
-            transform: translateX(-50%);
-            text-align: center;
-            line-height: 1.5;
+        .green {
+            color: $pr-dark-desaturated-cyan;
+        }
 
-            .title {
-                font-family: $font-header;
-                font-size: 3rem;
-                color: $nu-very-dark-desaturated-blue;
-                font-weight: 900;
-                margin-bottom: 3rem;
-            }
+        .blue {
+            color: $pr-dark-blue;
+        }
 
-            .green {
-                color: $pr-dark-desaturated-cyan;
-            }
+        .description {
+            max-width: 40ch;
+        }
+    }
 
-            .blue {
-                color: $pr-dark-blue;
-            }
+    @media screen and (max-width: 684px) {
+        grid-template-columns: 1fr;
 
+        height: 1300px;
+
+        &__contents {
             .description {
-                width: 40ch;
+                width: 30ch;
+                padding: 0 1rem;
             }
         }
     }

@@ -20,6 +20,7 @@
 
         <title>Frontend Mentor | Sunnyside agency landing page</title>
         <link rel="stylesheet" href="/dist/stylesheet/main.css" />
+        <script src="./app.js" defer></script>
     </head>
     <body>
         <!-- header -->
@@ -41,7 +42,7 @@
                         </li>
                         <button class="btn">Contact</button>
                     </ul>
-                    <div class="menu">
+                    <div class="menu" id="menu-toggle">
                         <img
                             src="/assets/images/icon-hamburger.svg"
                             alt="Hamburger menu"
@@ -57,11 +58,29 @@
                     />
                 </div>
             </div>
+
+            <!-- mobile menu -->
+
+            <ul
+                class="header__mobile-menu flex flex-col flex-jc-center flex-ai-center"
+                id="menu"
+            >
+                <li class="nav-item">
+                    <a href="#" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Projects</a>
+                </li>
+                <button class="btn">Contact</button>
+            </ul>
         </header>
         <!-- end of header -->
         <!-- main -->
         <main class="wrapper">
-            <section class="brand">
+            <section>
                 <div class="brand flex flex-ai-center flex-jc-center">
                     <div class="brand__contents">
                         <h2 class="title">
@@ -105,15 +124,9 @@
                     </div>
                 </div>
             </section>
-            <section class="services flex">
+            <section class="services">
                 <div class="services__graphics">
-                    <div class="image-box">
-                        <img
-                            src="/assets//images/desktop/image-graphic-design.jpg"
-                            alt="Picture of cherries on a green backgroung"
-                        />
-                    </div>
-                    <div class="contents">
+                    <div class="services__contents">
                         <h2 class="title green">Graphic Design</h2>
                         <p class="description green">
                             Great design makes you memorable. We deliver artwork
@@ -123,13 +136,7 @@
                     </div>
                 </div>
                 <div class="services__photography">
-                    <div class="image-box">
-                        <img
-                            src="/assets//images/desktop/image-photography.jpg"
-                            alt="Picture of an ornage on a light blue background"
-                        />
-                    </div>
-                    <div class="contents">
+                    <div class="services__contents">
                         <h2 class="title blue">Photography</h2>
                         <p class="description blue">
                             Increase your credibility by getting the most

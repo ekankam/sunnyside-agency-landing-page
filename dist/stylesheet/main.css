@@ -70,6 +70,7 @@ button {
   background-size: cover;
 }
 .header nav {
+  position: relative;
   padding: 3rem 1.5rem;
 }
 @media screen and (max-width: 684px) {
@@ -99,6 +100,7 @@ button {
 @media screen and (max-width: 684px) {
   .header nav .menu {
     display: block;
+    cursor: pointer;
   }
 }
 .header__banner-content {
@@ -133,6 +135,58 @@ button {
     top: 8.8rem;
   }
 }
+@media screen and (max-width: 684px) {
+  .header__banner-content {
+    position: relative;
+    top: 10%;
+  }
+}
+.header__mobile-menu {
+  position: absolute;
+  top: 11rem;
+  left: 50%;
+  width: 95%;
+  transform: translateX(-50%);
+  padding: 5rem 0;
+  gap: 3rem;
+  background-color: white;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+.header__mobile-menu .nav-item {
+  width: 100%;
+}
+.header__mobile-menu .nav-link {
+  display: block;
+  width: 100%;
+  text-align: center;
+  color: #818498;
+}
+.header__mobile-menu .btn {
+  padding: 2rem 4rem;
+  font-weight: 600;
+  font-family: "Fraunces", serif;
+  font-size: 1.9rem;
+  border-radius: 5rem;
+  background: #fad400;
+  text-transform: uppercase;
+}
+.header__mobile-menu::before {
+  content: "";
+  position: absolute;
+  top: -3rem;
+  right: 0;
+  border: 30px solid transparent;
+  border-right-color: #fff;
+}
+@media screen and (max-width: 684px) {
+  .header .open-menu {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
 
 .brand__contents {
   width: 50%;
@@ -147,7 +201,8 @@ button {
 .brand__contents .description {
   margin: 3rem 0;
   line-height: 1.5;
-  width: 50ch;
+  max-width: 50ch;
+  width: 100%;
 }
 .brand__contents .link {
   position: relative;
@@ -183,46 +238,85 @@ button {
   height: 100%;
   display: block;
 }
+@media screen and (max-width: 684px) {
+  .brand {
+    flex-direction: column;
+  }
+  .brand__contents {
+    width: 100%;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    text-align: center;
+    order: 1;
+  }
+  .brand__contents .title {
+    font-size: 2.5rem;
+  }
+  .brand__contents .description {
+    width: 100%;
+  }
+  .brand .link {
+    font-size: 1.5rem;
+  }
+  .brand__image-box {
+    width: 100%;
+  }
+}
 
 .services {
-  overflow-x: hidden;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  height: 550px;
 }
-.services__graphics, .services__photography {
-  width: 50%;
+.services__graphics {
+  background: url("/assets/images/desktop/image-graphic-design.jpg");
+  background-position: center;
+  background-size: cover;
   position: relative;
 }
-.services__graphics .imge-box, .services__photography .imge-box {
-  width: 100%;
-  height: 100%;
-  display: block;
+.services__photography {
+  background: url("/assets/images/desktop/image-photography.jpg");
+  background-position: center;
+  background-size: cover;
+  position: relative;
 }
-.services__graphics .contents, .services__photography .contents {
+.services__contents {
   position: absolute;
   left: 50%;
-  bottom: 10rem;
+  bottom: 7rem;
   transform: translateX(-50%);
   text-align: center;
   line-height: 1.5;
 }
-.services__graphics .contents .title, .services__photography .contents .title {
+.services__contents .title {
   font-family: "Fraunces", serif;
   font-size: 3rem;
   color: #23303e;
   font-weight: 900;
   margin-bottom: 3rem;
 }
-.services__graphics .contents .green, .services__photography .contents .green {
+.services__contents .green {
   color: #25564b;
 }
-.services__graphics .contents .blue, .services__photography .contents .blue {
+.services__contents .blue {
   color: #19536b;
 }
-.services__graphics .contents .description, .services__photography .contents .description {
-  width: 40ch;
+.services__contents .description {
+  max-width: 40ch;
+}
+@media screen and (max-width: 684px) {
+  .services {
+    grid-template-columns: 1fr;
+    height: 1300px;
+  }
+  .services__contents .description {
+    width: 30ch;
+    padding: 0 1rem;
+  }
 }
 
 .testimonials {
-  padding: 15rem 10rem;
+  padding: 10rem 7rem;
 }
 .testimonials__header {
   font-family: "Fraunces", serif;
@@ -232,10 +326,25 @@ button {
   margin-bottom: 10rem;
   letter-spacing: 2px;
 }
+@media screen and (max-width: 684px) {
+  .testimonials {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .testimonials__header {
+    font-size: 1.8rem;
+  }
+}
 .testimonials__container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 2rem;
+}
+@media screen and (max-width: 684px) {
+  .testimonials__container {
+    grid-template-columns: 1fr;
+    row-gap: 8rem;
+  }
 }
 .testimonials__container .client-testimonial .image-box {
   position: relative;
@@ -264,6 +373,11 @@ button {
 .gallery {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+}
+@media screen and (max-width: 684px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 .gallery__photo {
   position: relative;

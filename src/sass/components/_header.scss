@@ -7,7 +7,12 @@
     background-position: center;
     background-size: cover;
 
+    // @media screen and (max-width: 684px) {
+    //     background: url('/assets/images/mobile/image-header.jpg;');
+    // }
+
     nav {
+        position: relative;
         padding: 3rem 1.5rem;
 
         .nav-item,
@@ -40,6 +45,7 @@
 
             @media screen and (max-width: 684px) {
                 display: block;
+                cursor: pointer;
             }
         }
     }
@@ -72,6 +78,65 @@
             @media screen and (min-width: 1285px) {
                 top: 8.8rem;
             }
+        }
+
+        @media screen and (max-width: 684px) {
+            position: relative;
+            top: 10%;
+        }
+    }
+
+    // mobile menu
+    &__mobile-menu {
+        position: absolute;
+        top: 11rem;
+        left: 50%;
+        width: 95%;
+        transform: translateX(-50%);
+        padding: 5rem 0;
+        gap: 3rem;
+        background-color: $nu-white;
+
+        visibility: hidden;
+        opacity: 0;
+        pointer-events: none;
+
+        .nav-item {
+            width: 100%;
+        }
+
+        .nav-link {
+            display: block;
+            width: 100%;
+            text-align: center;
+            color: $nu-dark-grayish-blue;
+        }
+
+        .btn {
+            padding: 2rem 4rem;
+            font-weight: 600;
+            font-family: $font-header;
+            font-size: 1.9rem;
+            border-radius: 5rem;
+            background: $pr-yellow;
+            text-transform: uppercase;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: -3rem;
+            right: 0;
+            border: 30px solid transparent;
+            border-right-color: #fff;
+        }
+    }
+
+    .open-menu {
+        @media screen and (max-width: 684px) {
+            visibility: visible;
+            opacity: 1;
+            pointer-events: auto;
         }
     }
 }
