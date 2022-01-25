@@ -413,5 +413,14 @@ button {
 .footer__socials .icon:hover svg path {
   fill: white;
 }
+.footer .attribution {
+  margin-top: 2rem;
+  color: #818498;
+  font-size: 1.2rem;
+}
+.footer .attribution a {
+  text-decoration: underline;
+  color: #19536b;
+}
 
 /*# sourceMappingURL=main.css.map */
