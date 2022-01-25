@@ -18,9 +18,6 @@
         "url": "https://github.com/ekankam/sunnyside-agency-landing-page/issues"
     },
     "homepage": "https://github.com/ekankam/sunnyside-agency-landing-page#readme",
-    "dependencies": {
-        "parcel-bundler": "^1.12.5"
-    },
     "devDependencies": {
         "sass": "^1.49.0"
     }
